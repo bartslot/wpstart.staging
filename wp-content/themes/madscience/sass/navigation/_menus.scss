@@ -14,10 +14,10 @@ $dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
 		padding-left: 0;
 		border-radius: 1em;
 		
-		.menu-item:not(.featured) > a {
+		&#primary-menu > .menu-item:not(.featured) > a {
 			display: block;
 			text-decoration: none;
-			padding: 1.15em 2em;
+			padding: 1.35em 2em;
 			border-right: 1px solid $color__ms-transpblue;
 	    	box-shadow: inset 0px 1px 0 1px $color__ms-bluelight;
 		    margin-right: -2px;
@@ -27,9 +27,10 @@ $dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
 				background-color: $color__ms-purple;
 			}
 		}
-		.menu-item-has-children > a {
-			padding-right: 2.3em;
+		&#primary-menu > .menu-item.menu-item-has-children > a {
+				padding-right: 2.5em;
 		}
+
 		.menu-item-has-children > a:after {
 		    content: "\f107";
 		    border: 0 none;
@@ -47,6 +48,7 @@ $dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
+			
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -67,6 +69,7 @@ $dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
 			a {
 				width: 300px;
 				color: $color__text-screen;
+				box-shadow: none;
 			}
 
 			:hover > a,
@@ -83,22 +86,23 @@ $dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
 		li.focus > ul {
 			left: auto;
 		}
-	}
-	.featured {
-    	background: $dropdownshield;
-    	background-repeat: no-repeat;
-    	background-position: center;
-	    height: 97px;
-	    width: 250px;
-	    text-align: center;
-		margin-left: 5rem;
-
-		a {
-			top: 1em;
-		} 
 		
+		.featured {
+		    background: $dropdownshield;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    height: 97px;
+		    width: 200px;
+		    text-align: center;
+		    top: -4px;
+		    padding: 1em 0;
+		    float: right;
+		    
+		    a {
+		    	padding: 1.35em 0;
+		    }
+		}
 	}
-
 	li {
 		float: left;
 		position: relative;
