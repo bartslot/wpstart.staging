@@ -1,0 +1,40 @@
+{
+  "name": "wpstart",
+  "version": "0.0.1",
+  "description": "Accessible WordPress theme utilizing flex layouts and modern development practices.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartslot/wpstart"
+  },
+  "author": "Bart Slot",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bartslot/wpstart/issues"
+  },
+  "homepage": "https://github.com/bartslot/wpstart#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.2",
+    "browser-sync": "^2.17.6",
+    "gulp-image": "^4.3.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-newer": "^1.3.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "async-done": "^1.3.1",
+    "graceful-fs": "^4.1.11",
+    "gulp": "^3.9.1",
+    "is-negated-glob": "^1.0.0",
+    "just-debounce": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "orchestrator": "^0.3.8",
+    "pumpify": "^1.5.1"
+  }
+}

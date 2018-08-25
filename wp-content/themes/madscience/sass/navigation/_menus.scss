@@ -1,0 +1,162 @@
+$dropdownshield: url('/wp-content/themes/madscience/img/dropdownshield.svg');
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		background: white;
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		border-radius: 1em;
+		
+		.menu-item:not(.featured) > a {
+			display: block;
+			text-decoration: none;
+			padding: 1.15em 2em;
+			border-right: 1px solid $color__ms-transpblue;
+	    	box-shadow: inset 0px 1px 0 1px $color__ms-bluelight;
+		    margin-right: -2px;
+			
+			&:hover > a,
+			&.focus > a {
+				background-color: $color__ms-purple;
+			}
+		}
+		.menu-item-has-children > a {
+			padding-right: 2.3em;
+		}
+		.menu-item-has-children > a:after {
+		    content: "\f107";
+		    border: 0 none;
+		    font-family: $fontawesome;
+		    transform: translate(3px, 3px);
+		    position: absolute;
+		    right: 1em;
+		    top: 1em;
+			
+			&:before {
+    			right: 0;
+				border-right: 1px solid #0a5081;
+			}
+		}
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 300px;
+				color: $color__text-screen;
+			}
+
+			:hover > a,
+			.focus > a {
+				color: $color__text-screen;
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	.featured {
+    	background: $dropdownshield;
+    	background-repeat: no-repeat;
+    	background-position: center;
+	    height: 97px;
+	    width: 250px;
+	    text-align: center;
+		margin-left: 5rem;
+
+		a {
+			top: 1em;
+		} 
+		
+	}
+
+	li {
+		float: left;
+		position: relative;
+
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+.main-navigation a {
+		color: white;
+		text-transform: uppercase;
+		padding-left: 2em;
+    	padding-right: 2em;
+		
+		&:visited,
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: white;			
+		}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}

@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    font-family: $font__cursive;
+}
+h1 {
+	font-size: 4rem;
+	color: $color__ms-purple;
+	@media screen and (min-width: $query__medium) {
+		font-size: 3em;
+	}
+}
+h2 {
+	color: $color__ms-green;
+	font-size: 2.6em;
+	@media screen and (min-width: $query__medium) {
+		font-size: 2.2em;
+	}
+}
+h1.entry-title, h2.secondary-title {
+	text-align: center;
+	font-size: 2.6em;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+	@media screen and (min-width: $query__medium) {
+		font-size: 3em;
+	}
+	@media screen and (min-width: $query__large) {
+		font-size: 4em;
+	}
+}
+h3 {
+	font-size: 2.2em;
+	@media screen and (min-width: $query__medium) {
+		font-size: 1.8em;
+	}
+}
+h4 {
+	font-size: 2em;
+	@media screen and (min-width: $query__medium) {
+		font-size: 1.6em;
+	}
+}
